@@ -10,5 +10,6 @@ export default defineConfig({
       reporter: ["text", "html", "json"],
       exclude: ["&&/.*", "**/*.d.ts"],
     },
+    reporters: process.env.GITHUB_ACTIONS ? ["dot", "github-actions"] : ["dot"],
   },
 });

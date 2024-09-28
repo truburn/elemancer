@@ -11,8 +11,8 @@
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "test": "vitest --ui --open --typecheck",
-    "test:coverage": "vitest --coverage",
-    "test:storybook": "test-storybook",
+    "test:coverage": "vitest --typecheck --coverage",
+    "test:storybook": "test-storybook --coverage",
     "format:check": "npx prettier . --check",
     "format:fix": "npx prettier . --write",
     "chromatic": "npx chromatic"
