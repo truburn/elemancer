@@ -1,0 +1,10 @@
+{
+  "standard": {
+    "description": "The default font used throughout the application.",
+    "fontFamily": "sans-serif"
+  },
+  "monospace": {
+    "description": "Monospace font used in case such as lines of code.",
+    "fontFamily": "monospace"
+  }
+}

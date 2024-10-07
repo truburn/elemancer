@@ -26,6 +26,7 @@ export default defineConfig({
     alias: [
       createAlias("assets"),
       createAlias("components"),
+      createAlias("constants"),
       createAlias("layout", "components"),
       createAlias("navigation", "components"),
       createAlias("typography", "components"),

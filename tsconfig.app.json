@@ -26,6 +26,7 @@
     "paths": {
       "@assets/*": ["./assets/*"],
       "@components/*": ["./components/*"],
+      "@constants/*": ["./constants/*"],
       "@layout/*": ["./components/layout/*"],
       "@navigation/*": ["./components/navigation/*"],
       "@typography/*": ["./components/typography/*"],
