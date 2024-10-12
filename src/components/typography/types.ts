@@ -11,6 +11,7 @@ export enum FontSize {
 }
 
 export enum FontWeight {
+  HAIRLINE = "hairline",
   THIN = "thin",
   LIGHT = "light",
   NORMAL = "normal",
@@ -24,6 +25,7 @@ export interface FontConstant {
   size?: PartialRecord<FontSize, number>;
   weight?: PartialRecord<FontWeight, number>;
   description?: string;
+  sampleText?: string;
 }
 
 export interface FontDefinition {
