@@ -1,5 +1,5 @@
 import { Global, css } from "@emotion/react";
 
-export function GlobalStyles() {
+export default function GlobalStyles() {
   return <Global styles={css``} />;
 }

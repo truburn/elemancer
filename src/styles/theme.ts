@@ -1,1 +1,1 @@
-export const theme = {};
+export default {};
