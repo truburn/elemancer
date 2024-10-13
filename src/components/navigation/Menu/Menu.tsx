@@ -1,4 +1,4 @@
-import { menuStyles } from "@navigation/Menu";
+import { useMenuStyles } from "@navigation/Menu";
 
 export interface MenuProps {}
 
@@ -6,7 +6,7 @@ export interface MenuProps {}
  * Menu Component
  */
 export function Menu(_props: MenuProps) {
-  const menuClasses = menuStyles();
+  const menuClasses = useMenuStyles();
 
   return <div className={menuClasses.root}>Menu Component</div>;
 }

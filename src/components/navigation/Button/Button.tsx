@@ -1,4 +1,4 @@
-import { buttonStyles } from "@navigation/Button";
+import { useButtonStyles } from "@navigation/Button";
 
 export interface ButtonProps {}
 
@@ -6,7 +6,7 @@ export interface ButtonProps {}
  * Button component
  */
 export function Button(_props: ButtonProps) {
-  const buttonClasses = buttonStyles();
+  const buttonClasses = useButtonStyles();
 
   return <div className={buttonClasses.root}>Button Component</div>;
 }

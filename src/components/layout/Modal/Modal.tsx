@@ -1,4 +1,4 @@
-import { modalStyles } from "@layout/Modal";
+import { useModalStyles } from "@layout/Modal";
 
 export interface ModalProps {}
 
@@ -6,7 +6,7 @@ export interface ModalProps {}
  * Modal Component
  */
 export function Modal(_props: ModalProps) {
-  const modalClasses = modalStyles();
+  const modalClasses = useModalStyles();
 
   return <div className={modalClasses.root}>Modal Component</div>;
 }

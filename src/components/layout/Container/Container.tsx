@@ -1,4 +1,4 @@
-import { containerStyles } from "@layout/Container";
+import { useContainerStyles } from "@layout/Container";
 
 export interface ContainerProps {}
 
@@ -6,7 +6,7 @@ export interface ContainerProps {}
  * Container Component
  */
 export function Container(_props: ContainerProps) {
-  const containerClasses = containerStyles();
+  const containerClasses = useContainerStyles();
 
   return <div className={containerClasses.root}>Container Component</div>;
 }

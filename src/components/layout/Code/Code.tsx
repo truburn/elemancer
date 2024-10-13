@@ -1,4 +1,4 @@
-import { codeStyles } from "@layout/Code";
+import { useCodeStyles } from "@layout/Code";
 
 export interface CodeProps {}
 
@@ -6,7 +6,7 @@ export interface CodeProps {}
  * Code block component
  */
 export function Code(_props: CodeProps) {
-  const codeClasses = codeStyles();
+  const codeClasses = useCodeStyles();
 
   return <div className={codeClasses.root}>Code Component</div>;
 }

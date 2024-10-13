@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 
-export function menuStyles() {
+export function useMenuStyles() {
   const root = css({
     border: "dotted 1px",
     padding: 16,

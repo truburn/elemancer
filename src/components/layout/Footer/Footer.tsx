@@ -1,4 +1,4 @@
-import { footerStyles } from "@layout/Footer";
+import { useFooterStyles } from "@layout/Footer";
 
 export interface FooterProps {}
 
@@ -6,7 +6,7 @@ export interface FooterProps {}
  * Footer Component
  */
 export function Footer(_props: FooterProps) {
-  const footerClasses = footerStyles();
+  const footerClasses = useFooterStyles();
 
   return <div className={footerClasses.root}>Footer Component</div>;
 }

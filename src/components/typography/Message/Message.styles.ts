@@ -1,6 +1,9 @@
 import { css } from "@emotion/css";
+import { useTheme } from "@emotion/react";
 
-export function messageStyles() {
+export function useMessageStyles() {
+  const theme = useTheme();
+
   const root = css({
     border: "dotted 1px",
     padding: 16,

@@ -1,6 +1,6 @@
 import { css } from "@emotion/css";
 
-export function headingStyles() {
+export function useHeadingStyles() {
   const root = css({
     border: "dotted 1px",
     padding: 16,

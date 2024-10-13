@@ -1,4 +1,4 @@
-import { linkStyles } from "@navigation/Link";
+import { useLinkStyles } from "@navigation/Link";
 
 export interface LinkProps {}
 
@@ -6,7 +6,7 @@ export interface LinkProps {}
  * Link component
  */
 export function Link(_props: LinkProps) {
-  const linkClasses = linkStyles();
+  const linkClasses = useLinkStyles();
 
   return <div className={linkClasses.root}>Link Component</div>;
 }

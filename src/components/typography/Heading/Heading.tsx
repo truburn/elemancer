@@ -1,5 +1,5 @@
 import { cx } from "@emotion/css";
-import { headingStyles } from "@typography/Heading";
+import { useHeadingStyles } from "@typography/Heading";
 import { useExtractProps } from "@utils/hooks";
 import { ComponentBase } from "@utils/types";
 
@@ -18,7 +18,7 @@ export function Heading(_props: HeadingProps) {
     "heading",
   );
   const { title, subtitle, depth = 2 } = props satisfies HeadingProps;
-  const headingClasses = headingStyles();
+  const headingClasses = useHeadingStyles();
   const Tag = `h${depth}` as keyof JSX.IntrinsicElements;
 
   return (
