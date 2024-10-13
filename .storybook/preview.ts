@@ -2,7 +2,7 @@ import type { Preview } from "@storybook/react";
 import { withThemeFromJSXProvider } from "@storybook/addon-themes";
 import GlobalStyles from "../src/styles/GlobalStyles";
 import { ThemeProvider } from "@emotion/react";
-import theme from "../src/styles/theme";
+import { light, dark } from "../src/styles/theme";
 
 const preview: Preview = {
   parameters: {
@@ -15,8 +15,8 @@ const preview: Preview = {
   },
   decorators: [
     withThemeFromJSXProvider({
-      themes: { theme },
-      defaultTheme: "theme",
+      themes: { light, dark },
+      defaultTheme: "light",
       Provider: ThemeProvider,
       GlobalStyles,
     }),

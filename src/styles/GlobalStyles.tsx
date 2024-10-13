@@ -13,6 +13,8 @@ export default function GlobalStyles() {
           overflow: "hidden",
           fontFamily: theme.font.standard.family,
           fontSize: theme.font.standard.size.regular,
+          background: theme.color.bg,
+          color: theme.color.fg,
         },
         "#root": {
           display: "flex",

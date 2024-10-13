@@ -5,7 +5,10 @@ import {
 } from "@components/typography/types";
 import fontData from "@constants/fonts.json";
 import type { Theme } from "@emotion/react";
-import { ThemeFont } from "@styles/types";
+import { ColorVariant, ThemeColor, ThemeFont } from "@styles/types";
+import colorData from "@constants/colors.json";
+
+const colors: Record<ColorVariant, ThemeColor> = colorData;
 
 const fonts: FontDefinition = fontData;
 // Use the standard font for any other font group that is not defined
@@ -21,7 +24,7 @@ const DEFAULT_FONT: ThemeFont = {
   } as ThemeFont["size"],
 };
 
-export default {
+const commonTheme: Pick<Theme, "font"> = {
   font: {
     standard: DEFAULT_FONT,
     secondary: {
@@ -59,3 +62,17 @@ export default {
     },
   },
 } as Theme;
+
+export const light: Theme = {
+  ...commonTheme,
+  color: Object.fromEntries(
+    Object.values(ColorVariant).map((key) => [key, colors[key].light])
+  ) as Theme["color"],
+};
+
+export const dark: Theme = {
+  ...commonTheme,
+  color: Object.fromEntries(
+    Object.values(ColorVariant).map((key) => [key, colors[key].dark])
+  ) as Theme["color"],
+};
