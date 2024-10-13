@@ -1,2 +1,2 @@
 export * from "./Header";
-export * as headerClasses from "./Header.css";
+export * from "./Header.styles";

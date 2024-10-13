@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     "@storybook/addon-a11y",
     "@storybook/experimental-addon-test",
     "@storybook/addon-coverage",
+    "@storybook/addon-themes",
   ],
   framework: {
     name: "@storybook/react-vite",

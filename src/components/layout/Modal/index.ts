@@ -1,2 +1,2 @@
 export * from "./Modal";
-export * as modalClasses from "./Modal.css";
+export * from "./Modal.styles";

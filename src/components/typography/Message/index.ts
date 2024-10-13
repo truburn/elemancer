@@ -1,2 +1,2 @@
 export * from "./Message";
-export * as messageClasses from "./Message.css";
+export * from "./Message.styles";

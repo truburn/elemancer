@@ -1,2 +1,2 @@
 export * from "./Container";
-export * as containerClasses from "./Container.css";
+export * from "./Container.styles";

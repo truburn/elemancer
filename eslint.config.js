@@ -9,6 +9,7 @@ export default tseslint.config(
   { ignores: ["dist"] },
   {
     extends: [
+      "plugin:storybook/recommended",
       js.configs.recommended,
       ...tseslint.configs.recommendedTypeChecked,
       ...tseslint.configs.stylisticTypeChecked,

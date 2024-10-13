@@ -5,19 +5,19 @@ import { useMemo } from "react";
 /**
  * Hook to extract the base props from a component
  */
-export interface ExtractedProps extends ComponentBase {
-  props: any;
-}
+export type ExtractedProps<T = any> = ComponentBase & {
+  props: T;
+};
 
-export function useExtractProps(
+export function useExtractProps<T = any>(
   _props: any,
   prefix: string,
   suffix?: string
-): ExtractedProps {
-  const extracted = useMemo<ExtractedProps>(() => {
+): ExtractedProps<T> {
+  const extracted = useMemo<ExtractedProps<T>>(() => {
     const defaultID = generateUUID({ prefix, radii: [8], suffix });
-    const { id = defaultID, className, classes, styles, ...props } = _props;
-    return { id, className, classes, styles, props };
+    const { id = defaultID, classes, styles, ...props } = _props;
+    return { id, classes, styles, props };
   }, [_props, prefix, suffix]);
 
   return extracted;

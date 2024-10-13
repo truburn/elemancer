@@ -1,2 +1,2 @@
 export * from "./Footer";
-export * as footerClasses from "./Footer.css";
+export * from "./Footer.styles";

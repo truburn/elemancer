@@ -1,10 +1,12 @@
-import { headerClasses } from "@layout/Header";
+import { headerStyles } from "@layout/Header";
 
 export interface HeaderProps {}
 
 /**
  * Header Component
  */
-export function Header(props: HeaderProps) {
+export function Header(_props: HeaderProps) {
+  const headerClasses = headerStyles();
+
   return <div className={headerClasses.root}>Header Component</div>;
 }

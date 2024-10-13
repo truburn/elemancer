@@ -4,7 +4,6 @@ export type PartialRecord<K extends keyof any, T> = {
 
 export interface ComponentBase {
   id?: string;
-  className?: string;
   classes?: any;
   styles?: any;
 }

@@ -1,10 +1,12 @@
-import { codeClasses } from "@layout/Code";
+import { codeStyles } from "@layout/Code";
 
 export interface CodeProps {}
 
 /**
  * Code block component
  */
-export function Code(props: CodeProps) {
+export function Code(_props: CodeProps) {
+  const codeClasses = codeStyles();
+
   return <div className={codeClasses.root}>Code Component</div>;
 }

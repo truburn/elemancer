@@ -1,6 +1,5 @@
 import { Alias, defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import svgr from "vite-plugin-svgr";
 import { fileURLToPath } from "url";
 
@@ -21,7 +20,7 @@ export default defineConfig({
   server: {
     open: true,
   },
-  plugins: [react(), svgr(), vanillaExtractPlugin({ identifiers: "debug" })],
+  plugins: [react(), svgr()],
   resolve: {
     alias: [
       createAlias("assets"),

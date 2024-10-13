@@ -1,2 +1,2 @@
 export * from "./Blockquote";
-export * as blockquoteClasses from "./Blockquote.css";
+export * from "./Blockquote.styles";
