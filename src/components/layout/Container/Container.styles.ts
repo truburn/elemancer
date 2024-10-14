@@ -1,8 +1,12 @@
 import { css } from "@emotion/css";
+import { borderMixin } from "@styles/mixins";
+import { useTheme } from "@emotion/react";
 
 export function useContainerStyles() {
+  const theme = useTheme();
+
   const root = css({
-    border: "dotted 1px",
+    ...borderMixin(theme.border),
     padding: 16,
   });
 

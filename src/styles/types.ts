@@ -33,4 +33,10 @@ export interface ElTheme {
     monospace: ThemeFont;
   };
   color: Record<ColorVariant, string>;
+  border: {
+    width: number;
+    radius: number;
+    color: string;
+    style: "solid" | "dotted" | "dashed";
+  };
 }

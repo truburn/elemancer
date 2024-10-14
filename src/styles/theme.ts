@@ -8,8 +8,6 @@ import type { Theme } from "@emotion/react";
 import { ColorVariant, ThemeColor, ThemeFont } from "@styles/types";
 import colorData from "@constants/colors.json";
 
-const colors: Record<ColorVariant, ThemeColor> = colorData;
-
 const fonts: FontDefinition = fontData;
 // Use the standard font for any other font group that is not defined
 const DEFAULT_FONT: ThemeFont = {
@@ -24,55 +22,74 @@ const DEFAULT_FONT: ThemeFont = {
   } as ThemeFont["size"],
 };
 
-const commonTheme: Pick<Theme, "font"> = {
-  font: {
-    standard: DEFAULT_FONT,
-    secondary: {
-      family: fonts.secondary?.fontFamily ?? DEFAULT_FONT.family,
-      weight: {
-        ...DEFAULT_FONT.weight,
-        ...(fonts.secondary?.weight ?? {}),
-      },
-      size: {
-        ...DEFAULT_FONT.size,
-        ...(fonts.secondary?.size ?? {}),
-      },
+const themeFont: Theme["font"] = {
+  standard: DEFAULT_FONT,
+  secondary: {
+    family: fonts.secondary?.fontFamily ?? DEFAULT_FONT.family,
+    weight: {
+      ...DEFAULT_FONT.weight,
+      ...(fonts.secondary?.weight ?? {}),
     },
-    header: {
-      family: fonts.header?.fontFamily ?? DEFAULT_FONT.family,
-      weight: {
-        ...DEFAULT_FONT.weight,
-        ...(fonts.header?.weight ?? {}),
-      },
-      size: {
-        ...DEFAULT_FONT.size,
-        ...(fonts.header?.size ?? {}),
-      },
-    },
-    monospace: {
-      family: fonts.monospace?.fontFamily ?? DEFAULT_FONT.family,
-      weight: {
-        ...DEFAULT_FONT.weight,
-        ...(fonts.monospace?.weight ?? {}),
-      },
-      size: {
-        ...DEFAULT_FONT.size,
-        ...(fonts.monospace?.size ?? {}),
-      },
+    size: {
+      ...DEFAULT_FONT.size,
+      ...(fonts.secondary?.size ?? {}),
     },
   },
-} as Theme;
+  header: {
+    family: fonts.header?.fontFamily ?? DEFAULT_FONT.family,
+    weight: {
+      ...DEFAULT_FONT.weight,
+      ...(fonts.header?.weight ?? {}),
+    },
+    size: {
+      ...DEFAULT_FONT.size,
+      ...(fonts.header?.size ?? {}),
+    },
+  },
+  monospace: {
+    family: fonts.monospace?.fontFamily ?? DEFAULT_FONT.family,
+    weight: {
+      ...DEFAULT_FONT.weight,
+      ...(fonts.monospace?.weight ?? {}),
+    },
+    size: {
+      ...DEFAULT_FONT.size,
+      ...(fonts.monospace?.size ?? {}),
+    },
+  },
+};
+
+const colors: Record<ColorVariant, ThemeColor> = colorData;
+
+function getThemeColors(themeName: "light" | "dark"): Theme["color"] {
+  return Object.fromEntries(
+    Object.values(ColorVariant).map((key) => [key, colors[key][themeName]])
+  ) as Theme["color"];
+}
+
+const lightColors = getThemeColors("light");
+const darkColors = getThemeColors("dark");
+
+const themeBorder: Omit<Theme["border"], "color"> = {
+  width: 1,
+  radius: 4,
+  style: "solid",
+};
 
 export const light: Theme = {
-  ...commonTheme,
-  color: Object.fromEntries(
-    Object.values(ColorVariant).map((key) => [key, colors[key].light])
-  ) as Theme["color"],
+  font: themeFont,
+  color: lightColors,
+  border: {
+    ...themeBorder,
+    color: lightColors.muted,
+  },
 };
 
 export const dark: Theme = {
-  ...commonTheme,
-  color: Object.fromEntries(
-    Object.values(ColorVariant).map((key) => [key, colors[key].dark])
-  ) as Theme["color"],
+  font: themeFont,
+  color: darkColors,
+  border: {
+    ...themeBorder,
+    color: darkColors.muted,
+  },
 };

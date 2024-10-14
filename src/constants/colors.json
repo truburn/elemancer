@@ -16,8 +16,8 @@
     "light": "#FBC926"
   },
   "muted": {
-    "light": "#627793",
-    "dark": "#D7DCE2"
+    "dark": "#627793",
+    "light": "#D7DCE2"
   },
   "bg": {
     "dark": "#375270",
