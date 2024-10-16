@@ -10,7 +10,9 @@ export function useHeadingStyles() {
     padding: 16,
   });
 
-  const subtitle = css({});
+  const subtitle = css({
+    display: "block",
+  });
 
   return { root, subtitle };
 }

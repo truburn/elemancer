@@ -6,7 +6,8 @@ import { ComponentBase } from "@utils/types";
 export interface HeadingProps extends ComponentBase {
   title: string;
   subtitle?: string;
-  depth?: 1 | 2 | 3 | 4 | 5 | 6;
+  /** Level of the heading tag to use. Level 1 is reserved for the page title and is not available here. */
+  depth?: 2 | 3 | 4 | 5 | 6;
 }
 
 /**
@@ -29,9 +30,9 @@ export function Heading(_props: HeadingProps) {
     >
       {title ?? `Heading level ${depth}`}
       {subtitle && (
-        <span className={cx([headingClasses.subtitle, classes?.subtitle])}>
+        <small className={cx([headingClasses.subtitle, classes?.subtitle])}>
           {subtitle}
-        </span>
+        </small>
       )}
     </Tag>
   );
