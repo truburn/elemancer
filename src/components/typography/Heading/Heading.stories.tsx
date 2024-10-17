@@ -36,6 +36,11 @@ export const AllLevels: Story = {
       table: { disable: true },
     },
   },
+  parameters: {
+    controls: { disable: true },
+    actions: { disable: true },
+    interactions: { disable: true },
+  },
   render: () => {
     const outline = [
       { depth: 2, subtitle: true },

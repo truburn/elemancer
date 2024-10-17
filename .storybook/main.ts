@@ -9,9 +9,9 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@chromatic-com/storybook",
-    "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "@storybook/addon-interactions",
+    "@chromatic-com/storybook",
     "@storybook/experimental-addon-test",
     "@storybook/addon-coverage",
     "@storybook/addon-themes",
