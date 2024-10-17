@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Heading } from "@typography/Heading";
+import { Fragment } from "react";
 
 const meta = {
   component: Heading,
@@ -51,7 +52,7 @@ export const AllLevels: Story = {
       { depth: 4, subtitle: true },
       { depth: 5 },
       { depth: 6, subtitle: true },
-      { depth: 2 },
+      { depth: 2, subtitle: true },
       { depth: 3 },
       { depth: 3 },
     ];
@@ -59,12 +60,19 @@ export const AllLevels: Story = {
     return (
       <>
         {outline.map(({ depth, subtitle }, idx) => (
-          <Heading
-            key={idx}
-            depth={depth as any}
-            title={`Level ${depth} Heading`}
-            subtitle={subtitle ? `Level ${depth} Subtitle` : undefined}
-          />
+          <Fragment key={idx}>
+            <Heading
+              depth={depth as any}
+              title={`Level ${depth} Heading`}
+              subtitle={subtitle ? `Level ${depth} Subtitle` : undefined}
+            />
+            <p>
+              Far far away, behind the word mountains, far from the countries
+              Vokalia and Consonantia, there live the blind texts. Separated
+              they live in Bookmarksgrove right at the coast of the Semantics, a
+              large language ocean.
+            </p>
+          </Fragment>
         ))}
       </>
     );

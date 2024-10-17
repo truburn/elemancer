@@ -8,6 +8,17 @@ export function useHeadingStyles() {
   const subtitle = css({
     display: "block",
     fontSize: "0.875em",
+    fontStyle: "italic",
+    fontFamily: theme.font.standard.family,
+    fontVariationSettings: `"wght" ${theme.font.standard.weight.normal}`,
+  });
+
+  const title = css({
+    ...borderMixin({
+      color: theme.border.color,
+      width: { bottom: 1 },
+    }),
+    ...paddingMixin({ bottom: "0.25em" }),
   });
 
   const root = css({
@@ -15,29 +26,46 @@ export function useHeadingStyles() {
     flexDirection: "column",
     gap: 4,
     lineHeight: 1,
+    ...marginMixin({ top: "2em", bottom: "0.75em" }),
+    fontFamily: theme.font.secondary.family,
+    fontVariationSettings: `"wght" ${theme.font.secondary.weight.bold}`,
     "&.level-2": {
-      fontFamily: theme.font.secondary.family,
-      fontWeight: theme.font.secondary.weight.black,
       ...borderMixin({
         color: theme.color.primary,
         width: { top: 2 },
-        radius: 0,
       }),
-      ...marginMixin({ top: 32, bottom: 16 }),
-      ...paddingMixin({ top: 16 }),
-      gap: 2,
+      gap: 0,
+      ...paddingMixin({ top: "0.5em" }),
+      [`& .${title}`]: {
+        ...borderMixin(),
+        ...paddingMixin(),
+      },
       [`& .${subtitle}`]: {
-        fontWeight: theme.font.secondary.weight.light,
         fontVariant: "all-small-caps",
+        fontStyle: "normal",
+        fontFamily: theme.font.secondary.family,
+        fontVariationSettings: `"wght" ${theme.font.secondary.weight.light}`,
         ...paddingMixin({ left: 2 }),
+        ...borderMixin(),
       },
       "&:first-of-type": {
-        ...marginMixin(),
+        ...marginMixin({ bottom: 16 }),
         ...paddingMixin(),
         ...borderMixin(),
       },
     },
+    "&.level-3": {
+      [`& .${subtitle}`]: {
+        fontVariationSettings: `"wght" ${theme.font.standard.weight.light}`,
+        fontSize: "0.75em",
+      },
+    },
+    "&.level-4": {
+      [`& .${subtitle}`]: {
+        fontVariationSettings: `"wght" ${theme.font.standard.weight.light}`,
+      },
+    },
   });
 
-  return { root, subtitle };
+  return { root, subtitle, title };
 }

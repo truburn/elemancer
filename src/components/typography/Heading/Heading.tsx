@@ -28,9 +28,11 @@ export function Heading(_props: HeadingProps) {
       className={cx(`level-${depth}`, headingClasses.root, classes?.root)}
       style={styles}
     >
-      {title ?? `Heading level ${depth}`}
+      <span className={cx(headingClasses.title, classes?.title)}>
+        {title ?? `Heading level ${depth}`}
+      </span>
       {subtitle && (
-        <small className={cx([headingClasses.subtitle, classes?.subtitle])}>
+        <small className={cx(headingClasses.subtitle, classes?.subtitle)}>
           {subtitle}
         </small>
       )}
