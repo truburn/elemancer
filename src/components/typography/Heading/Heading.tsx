@@ -25,7 +25,7 @@ export function Heading(_props: HeadingProps) {
   return (
     <Tag
       id={id}
-      className={cx(headingClasses.root, classes?.root)}
+      className={cx(`level-${depth}`, headingClasses.root, classes?.root)}
       style={styles}
     >
       {title ?? `Heading level ${depth}`}

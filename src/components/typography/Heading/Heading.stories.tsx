@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Heading } from "@typography/Heading";
-import { Fragment } from "react";
 
 const meta = {
   component: Heading,
@@ -23,6 +22,54 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
+export const AllLevels: Story = {
+  argTypes: {
+    title: {
+      table: { disable: true },
+    },
+    subtitle: {
+      table: { disable: true },
+    },
+    depth: {
+      table: { disable: true },
+    },
+  },
+  render: () => {
+    const outline = [
+      { depth: 2, subtitle: true },
+      { depth: 3 },
+      { depth: 4 },
+      { depth: 3 },
+      { depth: 4 },
+      { depth: 2 },
+      { depth: 3, subtitle: true },
+      { depth: 4 },
+      { depth: 4, subtitle: true },
+      { depth: 5, subtitle: true },
+      { depth: 6 },
+      { depth: 4, subtitle: true },
+      { depth: 5 },
+      { depth: 6, subtitle: true },
+      { depth: 2 },
+      { depth: 3 },
+      { depth: 3 },
+    ];
+
+    return (
+      <>
+        {outline.map(({ depth, subtitle }, idx) => (
+          <Heading
+            key={idx}
+            depth={depth as any}
+            title={`Level ${depth} Heading`}
+            subtitle={subtitle ? `Level ${depth} Subtitle` : undefined}
+          />
+        ))}
+      </>
+    );
+  },
+};
 
 function HeadingStory(args: any) {
   return (
@@ -90,58 +137,5 @@ export const Level5: Story = {
 export const Level6: Story = {
   args: {
     depth: 6,
-  },
-};
-
-export const AllLevels: Story = {
-  argTypes: {
-    title: {
-      table: { disable: true },
-    },
-    subtitle: {
-      table: { disable: true },
-    },
-    depth: {
-      table: { disable: true },
-    },
-  },
-  render: () => {
-    const outline = [
-      { depth: 2, subtitle: true },
-      { depth: 3 },
-      { depth: 3 },
-      { depth: 4 },
-      { depth: 4 },
-      { depth: 2 },
-      { depth: 3, subtitle: true },
-      { depth: 4 },
-      { depth: 4, subtitle: true },
-      { depth: 5, subtitle: true },
-      { depth: 6 },
-      { depth: 5 },
-      { depth: 6, subtitle: true },
-    ];
-
-    return (
-      <>
-        {outline.map(({ depth, subtitle }, idx) => (
-          <Fragment key={idx}>
-            <Heading
-              depth={depth as any}
-              title={`Level ${depth} Heading`}
-              subtitle={subtitle ? `Level ${depth} Subtitle` : undefined}
-            />
-            <p>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
-            </p>
-          </Fragment>
-        ))}
-      </>
-    );
   },
 };

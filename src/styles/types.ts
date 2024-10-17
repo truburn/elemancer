@@ -1,4 +1,5 @@
 import { FontSize, FontWeight } from "@components/typography/types";
+import { NumberString } from "@utils/types";
 
 export interface ThemeFont {
   family: string;
@@ -25,6 +26,26 @@ export enum ColorVariant {
   ERROR = "error",
 }
 
+export interface BoxSides {
+  horizontal?: NumberString;
+  vertical?: NumberString;
+  top?: NumberString;
+  bottom?: NumberString;
+  left?: NumberString;
+  right?: NumberString;
+}
+
+export interface BorderRadius {
+  top?: NumberString;
+  bottom?: NumberString;
+  left?: NumberString;
+  right?: NumberString;
+  topLeft?: NumberString;
+  topRight?: NumberString;
+  bottomLeft?: NumberString;
+  bottomRight?: NumberString;
+}
+
 export interface ElTheme {
   font: {
     standard: ThemeFont;
@@ -34,8 +55,8 @@ export interface ElTheme {
   };
   color: Record<ColorVariant, string>;
   border: {
-    width: number;
-    radius: number;
+    width: NumberString | BoxSides;
+    radius: NumberString;
     color: string;
     style: "solid" | "dotted" | "dashed";
   };
