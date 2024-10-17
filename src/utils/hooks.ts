@@ -15,7 +15,7 @@ export function useExtractProps<T = any>(
   suffix?: string
 ): ExtractedProps<T> {
   const extracted = useMemo<ExtractedProps<T>>(() => {
-    const defaultID = generateUUID({ prefix, radii: [8], suffix });
+    const defaultID = generateUUID({ prefix, lengths: [8], suffix });
     const { id = defaultID, classes, styles, ...props } = _props;
     return { id, classes, styles, props };
   }, [_props, prefix, suffix]);

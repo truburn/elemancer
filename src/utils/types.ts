@@ -7,3 +7,5 @@ export interface ComponentBase {
   classes?: any;
   styles?: any;
 }
+
+export type NumberString = number | string;
