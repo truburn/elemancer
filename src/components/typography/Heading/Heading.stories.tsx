@@ -14,7 +14,6 @@ const meta = {
       options: [2, 3, 4, 5, 6],
       table: {
         defaultValue: { summary: "2" },
-        type: { summary: "2|3|4|5|6" },
       },
     },
   },
@@ -25,17 +24,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const AllLevels: Story = {
-  argTypes: {
-    title: {
-      table: { disable: true },
-    },
-    subtitle: {
-      table: { disable: true },
-    },
-    depth: {
-      table: { disable: true },
-    },
-  },
   parameters: {
     controls: { disable: true },
     actions: { disable: true },

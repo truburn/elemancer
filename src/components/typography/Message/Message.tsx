@@ -1,7 +1,6 @@
 import { useMessageStyles } from "@typography/Message";
-import { ComponentBase } from "@utils/types";
 
-export interface MessageProps extends ComponentBase {}
+export interface MessageProps {}
 
 /**
  * Text block element to display a status message

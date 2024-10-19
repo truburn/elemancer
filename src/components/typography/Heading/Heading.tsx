@@ -1,13 +1,26 @@
 import { cx } from "@emotion/css";
 import { useHeadingStyles } from "@typography/Heading";
 import { useExtractProps } from "@utils/hooks";
-import { ComponentBase } from "@utils/types";
+import { ReactNode } from "react";
 
-export interface HeadingProps extends ComponentBase {
-  title: string;
-  subtitle?: string;
+export interface HeadingProps {
+  /** The main content of the heading element */
+  title: ReactNode;
+  /** Secondary content */
+  subtitle?: ReactNode;
   /** Level of the heading tag to use. Level 1 is reserved for the page title and is not available here. */
   depth?: 2 | 3 | 4 | 5 | 6;
+  /**
+   * Unique identifier for the root element. If not provided, one will be
+   * generated with the prefix of `heading`.
+   */
+  id?: string;
+  /** Class names to overrides styles for specific elements in the component */
+  overrideClasses?: {
+    root?: string;
+    subtitle?: string;
+    title?: string;
+  };
 }
 
 /**

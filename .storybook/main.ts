@@ -5,6 +5,7 @@ const config: StorybookConfig = {
     "../docs/**/*.mdx",
     "../src/components/**/*.mdx",
     "../src/components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../src/styles/*.mdx",
   ],
   addons: [
     "@storybook/addon-links",
@@ -22,6 +23,18 @@ const config: StorybookConfig = {
   },
   docs: {
     defaultName: "Reference",
+  },
+  typescript: {
+    reactDocgen: "react-docgen-typescript",
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldExtractValuesFromUnion: true,
+      tsconfigPath: "../tsconfig.json",
+      propFilter: {
+        skipPropsWithName: [],
+        skipPropsWithoutDoc: false,
+      },
+    },
   },
 };
 export default config;

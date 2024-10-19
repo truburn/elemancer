@@ -1,7 +1,13 @@
 import { cx } from "@emotion/css";
-import { HeaderContentProps, useHeaderStyles } from "@layout/Header";
+import { HeaderContentList, useHeaderStyles } from "@layout/Header";
 import { Button } from "@navigation/Button";
 import { Heading } from "@typography/Heading";
+
+export interface HeaderContentProps {
+  id: string;
+  content: HeaderContentList;
+  className?: string;
+}
 
 /**
  * Renders each section of the `<Header />` component. It will render

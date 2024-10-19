@@ -1,13 +1,14 @@
 import { generateUUID } from "@utils/generate";
-import { ComponentBase } from "@utils/types";
 import { useMemo } from "react";
 
 /**
  * Hook to extract the base props from a component
  */
-export type ExtractedProps<T = any> = ComponentBase & {
+export interface ExtractedProps<T = any> {
   props: T;
-};
+  id?: string;
+  overrideClasses?: any;
+}
 
 export function useExtractProps<T = any>(
   _props: any,

@@ -7,6 +7,7 @@ import { allModes } from "./modes";
 import { Title, Subtitle, Description, ArgTypes } from "@storybook/blocks";
 import React from "react";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
+import { ImportStatement } from "./blocks/ImportStatement";
 
 const preview: Preview = {
   tags: ["autodocs"],
@@ -30,11 +31,25 @@ const preview: Preview = {
       page: () => (
         <>
           <Title />
-          <Subtitle />
+          <ImportStatement />
           <Description />
+          <h2>Props</h2>
           <ArgTypes />
         </>
       ),
+    },
+    options: {
+      storySort: {
+        order: [
+          "Introduction",
+          "components",
+          "form",
+          "layout",
+          "navigation",
+          "typography",
+          "Theme",
+        ],
+      },
     },
     viewport: {
       viewports: INITIAL_VIEWPORTS,
