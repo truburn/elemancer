@@ -5,4 +5,13 @@ export const allModes = {
   dark: {
     theme: "dark",
   },
+  mobile1: {
+    viewport: "mobile1",
+  },
+  mobile2: {
+    viewport: "mobile2",
+  },
+  tablet: {
+    viewport: "tablet",
+  },
 };
