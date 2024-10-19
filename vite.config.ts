@@ -24,11 +24,12 @@ export default defineConfig({
   resolve: {
     alias: [
       createAlias("assets"),
-      createAlias("components"),
       createAlias("constants"),
+      createAlias("form", "components"),
       createAlias("layout", "components"),
       createAlias("navigation", "components"),
       createAlias("typography", "components"),
+      createAlias("components"),
       createAlias("pages"),
       createAlias("styles"),
       createAlias("utils"),

@@ -25,11 +25,12 @@
     "baseUrl": "./src/",
     "paths": {
       "@assets/*": ["./assets/*"],
-      "@components/*": ["./components/*"],
       "@constants/*": ["./constants/*"],
+      "@form/*": ["./components/form/*"],
       "@layout/*": ["./components/layout/*"],
       "@navigation/*": ["./components/navigation/*"],
       "@typography/*": ["./components/typography/*"],
+      "@components/*": ["./components/*"],
       "@pages/*": ["./pages/*"],
       "@styles/*": ["./styles/*"],
       "@utils/*": ["./utils/*"]
