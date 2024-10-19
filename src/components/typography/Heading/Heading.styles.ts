@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import { borderMixin, marginMixin, paddingMixin } from "@styles/mixins";
 import { useTheme } from "@emotion/react";
 
-export function useHeadingStyles() {
+export const useHeadingStyles = () => {
   const theme = useTheme();
 
   const subtitle = css({
@@ -68,4 +68,4 @@ export function useHeadingStyles() {
   });
 
   return { root, subtitle, title };
-}
+};

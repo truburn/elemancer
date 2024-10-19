@@ -13,7 +13,7 @@ export interface HeaderContentProps {
  * Renders each section of the `<Header />` component. It will render
  * the appropriate children based on their type
  */
-export function HeaderContent(props: HeaderContentProps) {
+export const HeaderContent = (props: HeaderContentProps) => {
   const { id, content, className } = props;
   const classes = useHeaderStyles();
 
@@ -52,4 +52,4 @@ export function HeaderContent(props: HeaderContentProps) {
       })}
     </div>
   );
-}
+};

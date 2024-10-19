@@ -73,7 +73,7 @@ export interface HeaderProps {
  * Header element for use in sections within the page. The page header
  * should be rendered in the app layout wrapper
  */
-export function Header(_props: HeaderProps) {
+export const Header = (_props: HeaderProps) => {
   const { overrideClasses, id, props } = useExtractProps(_props, "header");
   const {
     children,
@@ -106,4 +106,4 @@ export function Header(_props: HeaderProps) {
       )}
     </div>
   );
-}
+};

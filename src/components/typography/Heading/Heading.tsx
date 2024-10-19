@@ -26,7 +26,7 @@ export interface HeadingProps {
 /**
  * Heading component
  */
-export function Heading(_props: HeadingProps) {
+export const Heading = (_props: HeadingProps) => {
   const { overrideClasses, id, props } = useExtractProps<HeadingProps>(
     _props,
     "heading",
@@ -50,4 +50,4 @@ export function Heading(_props: HeadingProps) {
       )}
     </Tag>
   );
-}
+};

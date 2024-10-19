@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import { borderMixin } from "@styles/mixins";
 import { useTheme } from "@emotion/react";
 
-export function useContainerStyles() {
+export const useContainerStyles = () => {
   const theme = useTheme();
 
   const root = css({
@@ -11,4 +11,4 @@ export function useContainerStyles() {
   });
 
   return { root };
-}
+};

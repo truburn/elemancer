@@ -5,8 +5,8 @@ export interface LinkProps {}
 /**
  * Link component
  */
-export function Link(_props: LinkProps) {
+export const Link = (_props: LinkProps) => {
   const linkClasses = useLinkStyles();
 
   return <div className={linkClasses.root}>Link Component</div>;
-}
+};

@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import { borderMixin } from "@styles/mixins";
 import { useTheme } from "@emotion/react";
 
-export function useHeaderStyles() {
+export const useHeaderStyles = () => {
   const theme = useTheme();
 
   const root = css({
@@ -41,4 +41,4 @@ export function useHeaderStyles() {
   const button = css({});
 
   return { root, section, heading, button };
-}
+};

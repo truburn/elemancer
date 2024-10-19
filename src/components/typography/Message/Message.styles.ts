@@ -2,7 +2,7 @@ import { css } from "@emotion/css";
 import { useTheme } from "@emotion/react";
 import { borderMixin } from "@styles/mixins";
 
-export function useMessageStyles() {
+export const useMessageStyles = () => {
   const theme = useTheme();
 
   const root = css({
@@ -11,4 +11,4 @@ export function useMessageStyles() {
   });
 
   return { root };
-}
+};
