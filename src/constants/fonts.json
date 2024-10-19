@@ -10,8 +10,8 @@
       "black": 800
     }
   },
-  "secondary": {
-    "description": "An alternative font to use that is similar to the logo.",
+  "header": {
+    "description": "Font family for the header. Same used in the logo.",
     "fontFamily": "\"source-code-variable\",sans-serif",
     "sampleText": "Elemancer",
     "weight": {

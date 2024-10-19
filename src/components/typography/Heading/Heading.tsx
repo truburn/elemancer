@@ -14,25 +14,24 @@ export interface HeadingProps extends ComponentBase {
  * Heading component
  */
 export function Heading(_props: HeadingProps) {
-  const { classes, styles, id, props } = useExtractProps<HeadingProps>(
+  const { overrideClasses, id, props } = useExtractProps<HeadingProps>(
     _props,
     "heading",
   );
   const { title, subtitle, depth = 2 } = props satisfies HeadingProps;
-  const headingClasses = useHeadingStyles();
+  const classes = useHeadingStyles();
   const Tag = `h${depth}` as keyof JSX.IntrinsicElements;
 
   return (
     <Tag
       id={id}
-      className={cx(`level-${depth}`, headingClasses.root, classes?.root)}
-      style={styles}
+      className={cx(`level-${depth}`, classes.root, overrideClasses?.root)}
     >
-      <span className={cx(headingClasses.title, classes?.title)}>
+      <span className={cx(classes.title, overrideClasses?.title)}>
         {title ?? `Heading level ${depth}`}
       </span>
       {subtitle && (
-        <small className={cx(headingClasses.subtitle, classes?.subtitle)}>
+        <small className={cx(classes.subtitle, overrideClasses?.subtitle)}>
           {subtitle}
         </small>
       )}

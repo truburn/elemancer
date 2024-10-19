@@ -27,8 +27,8 @@ export function useHeadingStyles() {
     gap: 4,
     lineHeight: 1,
     ...marginMixin({ top: "2em", bottom: "0.75em" }),
-    fontFamily: theme.font.secondary.family,
-    fontVariationSettings: `"wght" ${theme.font.secondary.weight.bold}`,
+    fontFamily: theme.font.header.family,
+    fontVariationSettings: `"wght" ${theme.font.header.weight.bold}`,
     "&.level-2": {
       ...borderMixin({
         color: theme.color.primary,
@@ -43,8 +43,8 @@ export function useHeadingStyles() {
       [`& .${subtitle}`]: {
         fontVariant: "all-small-caps",
         fontStyle: "normal",
-        fontFamily: theme.font.secondary.family,
-        fontVariationSettings: `"wght" ${theme.font.secondary.weight.light}`,
+        fontFamily: theme.font.header.family,
+        fontVariationSettings: `"wght" ${theme.font.header.weight.light}`,
         ...paddingMixin({ left: 2 }),
         ...borderMixin(),
       },

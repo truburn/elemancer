@@ -5,7 +5,7 @@ export default function GlobalStyles() {
   return (
     <Global
       styles={css({
-        "html, body, #root": {
+        "html, body": {
           margin: 0,
           padding: 0,
           width: "100vw",
@@ -16,7 +16,7 @@ export default function GlobalStyles() {
           background: theme.color.bg,
           color: theme.color.fg,
         },
-        "#root": {
+        "#app-root": {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",

@@ -5,7 +5,7 @@ import { ThemeProvider } from "@emotion/react";
 import { dark } from "@styles/theme";
 import GlobalStyles from "@styles/GlobalStyles";
 
-createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById("app-root")!).render(
   <StrictMode>
     <ThemeProvider theme={dark}>
       <GlobalStyles />
