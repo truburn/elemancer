@@ -21,7 +21,9 @@ interface SearchBoxProps {
  * Search box component
  */
 export const SearchBox = (_props: SearchBoxProps) => {
-  const { id, overrideClasses, props } = useExtractProps(_props, "searchBox");
+  const { id, overrideClasses, props } = useExtractProps(_props, {
+    prefix: "searchBox",
+  });
   const classes = useSearchBoxStyles();
 
   return (

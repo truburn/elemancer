@@ -74,7 +74,9 @@ export interface HeaderProps {
  * should be rendered in the app layout wrapper
  */
 export const Header = (_props: HeaderProps) => {
-  const { overrideClasses, id, props } = useExtractProps(_props, "header");
+  const { overrideClasses, id, props } = useExtractProps(_props, {
+    prefix: "header",
+  });
   const {
     children,
     startContent = [],

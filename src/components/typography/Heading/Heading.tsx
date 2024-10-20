@@ -27,10 +27,9 @@ export interface HeadingProps {
  * Heading component
  */
 export const Heading = (_props: HeadingProps) => {
-  const { overrideClasses, id, props } = useExtractProps<HeadingProps>(
-    _props,
-    "heading",
-  );
+  const { overrideClasses, id, props } = useExtractProps<HeadingProps>(_props, {
+    prefix: "heading",
+  });
   const { title, subtitle, depth = 2 } = props satisfies HeadingProps;
   const classes = useHeadingStyles();
   const Tag = `h${depth}` as keyof JSX.IntrinsicElements;
