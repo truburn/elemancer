@@ -3,6 +3,7 @@ import { Blockquote as BlockquoteComponent } from "@layout/Blockquote";
 
 const meta = {
   component: BlockquoteComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof BlockquoteComponent>;
 
 export default meta;

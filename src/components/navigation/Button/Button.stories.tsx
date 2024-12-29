@@ -3,6 +3,10 @@ import { Button as ButtonComponent } from "@navigation/Button";
 
 const meta = {
   component: ButtonComponent,
+  tags: ["pending"],
+  args: {
+    label: "Button",
+  },
 } satisfies Meta<typeof ButtonComponent>;
 
 export default meta;

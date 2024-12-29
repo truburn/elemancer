@@ -3,6 +3,7 @@ import { Link as LinkComponent } from "@navigation/Link";
 
 const meta = {
   component: LinkComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof LinkComponent>;
 
 export default meta;

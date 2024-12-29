@@ -3,6 +3,7 @@ import { Footer as FooterComponent } from "@layout/Footer";
 
 const meta = {
   component: FooterComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof FooterComponent>;
 
 export default meta;

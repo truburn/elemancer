@@ -4,6 +4,7 @@ import { Fragment } from "react";
 
 const meta = {
   component: Heading,
+  tags: ["pending"],
   args: {
     title: "Heading Title",
     subtitle: "The Subtitle",

@@ -12,11 +12,11 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-a11y",
-    "@storybook/addon-interactions",
     "@chromatic-com/storybook",
     "@storybook/experimental-addon-test",
     "@storybook/addon-coverage",
     "@storybook/addon-themes",
+    "storybook-addon-tag-badges",
   ],
   framework: {
     name: "@storybook/react-vite",
@@ -30,7 +30,6 @@ const config: StorybookConfig = {
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       shouldExtractValuesFromUnion: true,
-      tsconfigPath: "../tsconfig.json",
       propFilter: {
         skipPropsWithName: [],
         skipPropsWithoutDoc: false,

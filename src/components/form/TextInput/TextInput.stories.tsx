@@ -3,6 +3,7 @@ import { TextInput } from "@form/TextInput";
 
 const meta = {
   component: TextInput,
+  tags: ["pending"],
 } satisfies Meta<typeof TextInput>;
 
 export default meta;

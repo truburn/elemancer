@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 
 const meta = {
   component: Header,
+  tags: ["pending"],
 } satisfies Meta<typeof Header>;
 
 export default meta;
@@ -18,9 +19,9 @@ const MOCK_HEADING: HeadingProps & { type: "heading" } = {
 };
 
 const MOCK_BUTTONS: Array<ButtonProps & { type: "button" }> = [
-  { type: "button" },
-  { type: "button" },
-  { type: "button" },
+  { type: "button", label: "Button" },
+  { type: "button", label: "Button" },
+  { type: "button", label: "Button" },
 ];
 
 const MOCK_PARAGRAPH: ReactNode = <p>The Big Oxmox advised her not to do so</p>;

@@ -10,7 +10,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import { ImportStatement } from "./blocks/ImportStatement";
 
 const preview: Preview = {
-  tags: ["autodocs"],
+  tags: ["autodocs", "autodocs"],
   parameters: {
     controls: {
       matchers: {

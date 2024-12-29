@@ -3,6 +3,7 @@ import { Textarea } from "@form/Textarea";
 
 const meta = {
   component: Textarea,
+  tags: ["pending"],
 } satisfies Meta<typeof Textarea>;
 
 export default meta;

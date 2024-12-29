@@ -4,6 +4,7 @@ import { SearchBox } from "@components/SearchBox";
 const meta = {
   component: SearchBox,
   title: "components/SearchBox",
+  tags: ["pending"],
 } satisfies Meta<typeof SearchBox>;
 
 export default meta;

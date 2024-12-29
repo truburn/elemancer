@@ -3,6 +3,7 @@ import { Menu as MenuComponent } from "@navigation/Menu";
 
 const meta = {
   component: MenuComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof MenuComponent>;
 
 export default meta;

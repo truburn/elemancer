@@ -3,6 +3,7 @@ import { Container as ContainerComponent } from "@layout/Container";
 
 const meta = {
   component: ContainerComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof ContainerComponent>;
 
 export default meta;

@@ -3,6 +3,7 @@ import { Message as MessageComponent } from "@typography/Message";
 
 const meta = {
   component: MessageComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof MessageComponent>;
 
 export default meta;

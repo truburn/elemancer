@@ -3,6 +3,7 @@ import { Modal as ModalComponent } from "@layout/Modal";
 
 const meta = {
   component: ModalComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof ModalComponent>;
 
 export default meta;

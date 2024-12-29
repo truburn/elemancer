@@ -3,6 +3,7 @@ import { Checkbox } from "@form/Checkbox";
 
 const meta = {
   component: Checkbox,
+  tags: ["pending"],
 } satisfies Meta<typeof Checkbox>;
 
 export default meta;

@@ -3,6 +3,7 @@ import { Code as CodeComponent } from "@layout/Code";
 
 const meta = {
   component: CodeComponent,
+  tags: ["pending"],
 } satisfies Meta<typeof CodeComponent>;
 
 export default meta;

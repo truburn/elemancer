@@ -3,6 +3,7 @@ import { Switch } from "@form/Switch";
 
 const meta = {
   component: Switch,
+  tags: ["pending"],
 } satisfies Meta<typeof Switch>;
 
 export default meta;
